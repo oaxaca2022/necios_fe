@@ -1,0 +1,82 @@
+---
+  
+
+---
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WK4T2MZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<div class="burguer__nav">
+  <a href="/">
+      <img src="/images/nav__logo.svg" class="nav__logo" id="imgNavLogo">
+  </a>
+  <div class="nav__button" id="navButton">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</div>
+<!-- nav -->
+<nav id="navContainer">
+  <div class="nav__title">
+      <h3></h3>
+  </div>
+  <ul class="nav__list">
+      <li class="nav__item">
+          <a href="/menu" class="btn__nav">
+              <i class="fi-cta flaticon-comida-1"></i>
+              <span>Carta</span>
+          </a>
+      </li>
+      <li class="nav__item">
+          <a href="/promociones" class="btn__nav">
+              <i class="fi-cta flaticon-etiqueta-de-precio"></i>
+              <span>Promociones</span>
+          </a>
+      </li>
+      <li class="nav__item">
+          <a href="./eventos" class="btn__nav">
+              <i class="fi-cta flaticon-fecha"></i>
+              <span>Eventos</span>
+          </a>
+      </li>
+      <li class="nav__item">
+          <a href="https://www.waze.com/ul?place=ChIJzy-OBIf_0YURgw33wFjUi9E&ll=19.41174530%2C-99.17700020&navigate=yes" class="btn__nav">
+              <i class="fi-cta flaticon-waze"></i>
+              <span>Conduce</span>
+          </a>
+      </li>
+  </ul>
+  <div class="nav__title">
+      <h3>Reservaciones</h3>
+  </div>
+  <ul class="nav__list">
+      <li class="nav__item">
+          <a href="tel:5589995869" class="btn__nav">
+              <i class="fi-cta flaticon-llamada-telefonica"></i>
+              <span>Teléfono</span>
+          </a>
+      </li>
+      <li class="nav__item">
+          <a href="https://m.me/NeciosBar" class="btn__nav">
+              <i class="fi-cta flaticon-mensajero"></i>
+              <span>Messenger</span>
+          </a>
+      </li>
+  </ul>
+</nav>
+<script>
+
+  const button = document.getElementsByClassName('nav__button')[0]
+  const navContainer = document.getElementById('navContainer')
+
+  button.addEventListener('click', () => {
+    button.classList.toggle("change")
+    navContainer.classList.toggle("navBarActive")
+  })
+
+</script>
+<style lang="scss">
+  @import '../sass/neciosbar.scss';
+</style>
