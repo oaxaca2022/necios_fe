@@ -1,0 +1,409 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const heroImages = [
+{
+    id: 1,
+    src: '/images/mezcaleria/mezcaleria1.jpg',
+    alt: 'Mezcaleria 1',
+  },
+  {
+    id: 2,
+    src: '/images/mezcaleria/mezcaleria2.jpg',
+    alt: 'Mezcaleria 2',
+  },
+  {
+    id: 3,
+    src: '/images/mezcaleria/mezcaleria3.jpg',
+    alt: 'Mezcaleria 3',
+  },
+  {
+    id: 4,
+    src: '/images/mezcaleria/mezcaleria4.jpg',
+    alt: 'Mezcaleria 4',
+  },
+]
+
+const reservationImages = [
+  {
+    id: 5,
+    src: '/images/mezcaleria/mezcaleria5.jpg',
+    alt: 'Mezcaleria 5',
+  },
+  {
+    id: 6,
+    src: '/images/mezcaleria/mezcaleria6.jpg',
+    alt: 'Mezcaleria 6',
+  },
+  {
+    id: 7,
+    src: '/images/mezcaleria/mezcaleria7.jpg',
+    alt: 'Mezcaleria 7',
+  },
+  {
+    id: 8,
+    src: '/images/mezcaleria/mezcaleria8.jpg',
+    alt: 'Mezcaleria 8',
+  },
+]
+
+const foodImages = [
+
+  {
+    id: 9,
+    src: '/images/mezcaleria/mezcaleria9.jpg',
+    alt: 'Mezcaleria 9',
+  },
+  {
+    id: 10,
+    src: '/images/mezcaleria/mezcaleria10.jpg',
+    alt: 'Mezcaleria 10',
+  },
+  {
+    id: 11,
+    src: '/images/mezcaleria/mezcaleria11.jpg',
+    alt: 'Mezcaleria 11',
+  },
+  {
+    id: 12,
+    src: '/images/mezcaleria/mezcaleria12.jpg',
+    alt: 'Mezcaleria 12',
+  },
+  {
+    id: 13,
+    src: '/images/mezcaleria/mezcaleria13.jpg',
+    alt: 'Mezcaleria 13',
+  },
+  {
+    id: 14,
+    src: '/images/mezcaleria/mezcaleria14.jpg',
+    alt: 'Mezcaleria 14',
+  },
+  {
+    id: 15,
+    src: '/images/mezcaleria/mezcaleria15.jpg',
+    alt: 'Mezcaleria 15',
+  },
+  {
+    id: 16,
+    src: '/images/mezcaleria/mezcaleria16.jpg',
+    alt: 'Mezcaleria 16',
+  },
+  {
+    id: 17,
+    src: '/images/mezcaleria/mezcaleria17.jpg',
+    alt: 'Mezcaleria 17',
+  },
+  {
+    id: 18,
+    src: '/images/mezcaleria/mezcaleria18.jpg',
+    alt: 'Mezcaleria 18',
+  },
+  {
+    id: 19,
+    src: '/images/mezcaleria/mezcaleria19.jpg',
+    alt: 'Mezcaleria 19',
+  },
+  {
+    id: 20,
+    src: '/images/mezcaleria/mezcaleria20.jpg',
+    alt: 'Mezcaleria 20',
+  },
+  {
+    id: 21,
+    src: '/images/mezcaleria/mezcaleria21.jpg',
+    alt: 'Mezcaleria 21',
+  },
+]
+---
+
+<Layout title="Welcome to Astro.">
+  <main id="home">
+    <header>
+        <div class="section__container">
+            <div class="section__background background__header">
+                <div class="section__content--full background__transparent">
+                    <div class="grid__header section__grid">
+                        <img src="" alt="" id="imgHeaderLogo" class="header__logo">
+                        <h1 class="header__title">La noche es de los Necios</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section__container section__cta">
+            <div class="section__background background__cta">
+                <div class="grid__cta">
+                    <div class="cta__item">
+                        <a href="tel:5589995869" class="btn__cta">
+                            <i class="fi-cta flaticon-llamada-telefonica"></i>
+                            <span>Reserva</span>
+                        </a>
+                    </div>
+                    <div class="cta__item">
+                        <a href="./menu.html" class="btn__cta">
+                            <i class="fi-cta flaticon-comida-1"></i>
+                            Carta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ¿quiénes somos? -->
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content--full">
+                <div class="grid__nosotros section__grid">
+                    <div class="nosotros__item">
+                        <img src="" alt="" id="imgNosotros" class="nosotros__icon">
+                        <p class="align__center uppercase nosotros__text">
+                            <span class="">Necios</span> es un bar boutique que esconde un rinconcito
+                            Oaxaqueño, ubicado en la colonia Condesa.
+                        </p> 
+                        <p class="align__center uppercase nosotros__text">
+                            Es un espacio íntimo que despierta los deseos de noche
+                            con un ambiente relajado donde podrás disfrutar
+                            comida rica típica de Oaxaca, acompañada de los
+                            mejores y originales cocteles o un buen mezcal de
+                            gusano rojo, mientras escuchas música en vivo.
+                        </p>
+                        <p class="align__center uppercase nosotros__text">
+                            Complacerás todos tus sentidos y podrás disfrutar
+                            de una noche muy especial. 
+                        </p>
+                        <p class="align__center uppercase nosotros__text">
+                            Necios es uno de lo puntos que
+                            debes tener en tu lista de lugares para visitar en
+                            la ciudad.
+                        </p>
+                        <p class="align__center uppercase nosotros__text">
+                            <span class="">¡Ven por un buen mezcal y vuélvete un
+                            Necio con la noche!</span>
+                        </p>
+                    </div>
+                    <div class="nosotros__item">
+                        <div class="grid__images">
+                          {
+                            heroImages.map((item) => (
+                                <div class="grid__images--item">
+                                  <img src={item.src} alt={item.alt} class="grid__img img__responsive" />
+                                </div>
+                                ))
+                              }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Reservaciones  -->
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content">
+                <div class="grid__reservaciones section__grid">
+                    <div class="reservaciones__item">
+                        <div class="section__title">
+                            <h2 class="section__title--h2">Reserva ahora</h2>
+                        </div>
+                        <div class="section__subtitle">
+                            
+                        </div>
+                        <div class="section__content">
+                            <h3>Condiciones de reservación y servicio:</h3>
+                            <p>
+                                Debido a la contingencia que estamos viviendo el servicio en el establecimiento será sólo con reservación previa o si hay disponibilidad en el momento, sin embargo puedes hacer tú pedido para llevar y disfrutar en tu casa los sabores de Necios.
+                            </p>
+                        </div>
+                        <div class="section__content">
+                            <p>Reserva vía Messenger</p>
+                            <a href="https://m.me/NeciosBar" class="btn">
+                                <i class="fi flaticon-mensajero"></i>
+                            </a>
+                        </div>
+                        <div class="section__content">
+                            <p>Reserva por teléfono</p>
+                            <a href="tel:5589995869" class="btn">
+                                <i class="fi flaticon-llamada-telefonica"></i>
+                                <!-- <p>Llámanos</p> -->
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="reservaciones__item">
+                        <div class="grid__images">
+                          {
+                            reservationImages.map((item) => (
+                              <div class="grid__images--item">
+                                <img src={item.src} alt={item.alt} class="grid__img img__responsive" />
+                              </div>
+                            ))
+                          }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Condiciones del servicio -->
+
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content">
+                <div class="grid__carta section__grid">
+                    <div class="carta__item">
+                        <div class="section__title">
+                            <h2 class="section__title--h2">Carta</h2>
+                        </div>
+                        <section class="section__subtitle">
+                            EL SERVICIO DE ALIMENTOS EMPIEZA A PARTIR DE
+                            LAS 4:00 P.M Y TERMINA A LAS 10:00 P.M
+                        </section>
+                        <div class="section__content">
+                            <!-- <p>Conoce nuestra carta</p> -->
+                            <a href="./menu.html" class="btn">
+                                <!-- <i class="fi flaticon-llamada-telefonica"></i> -->
+                                <p>Ver carta</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carta__item">
+                        <div class="grid__images--carta">
+                          {
+                            foodImages.map((item) => (
+                                <div class="grid__images--itemcarta">
+                                  <img src={item.src} alt={item.alt} class="grid__img img__responsive" />
+                                </div>  
+                            ))
+                          }
+                        </div>
+                    </div>
+                    <div class="carta__item">
+                        <div class="section__content">
+                            <!-- <p>Conoce nuestra carta</p> -->
+                            <a href="./menu.html" class="btn">
+                                <!-- <i class="fi flaticon-llamada-telefonica"></i> -->
+                                <p>Ver carta</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__container">
+        <section class="section__background background__tienda">
+            <section class="section__content--full">
+                <div class="grid__tienda section__grid">
+                    <div class="tienda__item">
+
+                    </div>
+                    <div class="tienda__item">
+                        <h2 class="tienda__title">
+                            MEZCAL 
+                            ARTESANAL ENTREGADO
+                            DIRECTAMENTE A TU
+                            PUERTA.
+                        </h2>
+                        <a href="https://neciomezcal.mx" class="btn btn-white">
+                            NecioMezcal.mx
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    
+    
+    <!-- Promociones -->
+
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content">
+                <div class="grid__promos section__grid">
+                    <div class="promos__item">
+                        <div class="section__title">
+                            <h2 class="section__title--h2">Promociones</h2>
+                            
+                        </div>
+                    </div>
+                    <div class="promos__item">
+                        <ul>
+                            <li>
+                                <h3 class="title__promos">Martes a viernes</h3>
+                                <p>Tlayuda + mezcal + guacamole</p>
+                                <p class="promos__precio">$150.00</p>
+                            </li>
+                            <!-- <li>
+                                <h3 class="title__promos">Comida 1 y bebida 2*</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                <p class="promos__precio">$1,000.00</p>
+                            </li>
+                            <li>
+                                <h3 class="title__promos">Comida 1 y bebida 2*</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                <p class="promos__precio">$1,000.00</p>
+                            </li> -->
+                        </ul>
+                        <a href="./promociones.html" class="btn">
+                            Ver todas las promociones
+                        </a>
+                        *Solo marcas participantes. Consulta disponibilidad y vigencia. Aplican términos y condiciones.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content">
+                <div class="grid__newsletter section__grid">
+                    <div class="newsletter__item">
+                        <div class="section__title">
+                            <h2 class="section__title--h2">Eventos y noticias</h2>
+                        </div>
+                        <div class="section__subtitle">
+                            <p>
+                                Recibe antes que nadie nuestras noticias y eventos.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="newsletter__item">
+                        <div class="newsletter__form">
+
+                            <form class="form" id="newsletterForm" name="newsletterForm" enctype="multipart/form-data">
+                                <div class="input__container input__susbcribe">
+                                    
+                                    <input type="text" name="emailNewsletter" id="emailNewsletter" class="form-control" placeholder="Tu e-mail">
+                                    <button class="btn">
+                                        <span>Suscribirme</span>
+                                        <div class="transition"></div>
+                                    </button>
+                                </div>
+                                <!-- <div class="input__container">
+                                    <input type="checkbox" name="aviso" id="aviso">
+                                    <label for="aviso">Revisa nuestro<a href="#">Aviso de privacidad</a></label>
+                                </div> -->
+                                <div class="input__container">
+                                    <p> Consulta aquí nuestro <a href="#">aviso de privacidad</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</Layout>
+<style lang="scss">
+  @import '../sass/neciosbar.scss';
+</style>

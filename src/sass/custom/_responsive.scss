@@ -1,0 +1,97 @@
+@media screen and (min-width: 767px) {
+    /* Nosotros */
+    .grid__nosotros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .grid__reservaciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .reservaciones__item {
+        align-self: center;
+    }
+    .reservaciones__item:nth-child(2) {
+        order: 0;
+    }
+    .nav__list {
+        width: 350px;
+    }
+    // .grid__carta {
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+    //     grid-gap: 2em;
+    // }
+    .grid__images--carta {
+
+    }
+    .grid__images--itemcarta {
+        overflow: hidden;
+    }
+    .grid__images--itemcarta:nth-child(1) {
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;
+    }
+    .grid__images--itemcarta:nth-child(2) {
+        grid-column: auto / span 5;
+        grid-row: auto / span 6;
+    }
+    .grid__images--itemcarta:nth-child(3) {
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;
+    }
+    .grid__images--itemcarta:nth-child(4) {
+        grid-column: auto / span 5;
+        grid-row: auto / span 6;
+    }
+    .grid__images--itemcarta:nth-child(5) {
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;   
+    }
+    .grid__images--itemcarta:nth-child(6) {
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;        
+    }   
+    .grid__images--itemcarta:nth-child(7) {
+        
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;
+    }
+    .grid__images--itemcarta:nth-child(8) {
+        
+        grid-column: auto / span 5;
+        grid-row: auto / span 6;
+    }
+    .grid__images--itemcarta:nth-child(9) {
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;
+        
+    }
+    .grid__images--itemcarta:nth-child(10) {
+        
+        grid-column: auto / span 5;
+        grid-row: auto / span 6;
+    }
+    .grid__images--itemcarta:nth-child(11) {
+        
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;
+    }
+    .grid__images--itemcarta:nth-child(12) {
+        
+        grid-column: auto / span 3;
+        grid-row: auto / span 3;
+    }
+    .grid__images--itemcarta:nth-child(13) {
+        
+        
+    }
+}
+@media screen and (min-width: 1023px) {
+
+}
+@media screen and (min-width: 1366px) {
+
+}

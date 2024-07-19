@@ -1,0 +1,77 @@
+
+$form-bg: 000000;
+$form-shadow: $rojo;
+$form-primary-highlight: black;
+$form-secondary-highlight: $gris_fuerte;
+$font-size: 14pt;
+$font-face: 'Arial';
+$font-color: #2A293E;
+
+input {
+    background: $blanco_necio;
+    border: none;
+    border-bottom: 5px solid rgba(0,0,0,1);
+    box-sizing: border-box;
+    color: rgba(0,0,0,1);
+    display: block;
+    // font-family: $font-face;
+    // font-size: $font-size;
+    line-height: 1em;
+    margin-bottom: 1em;
+    min-width: 250px;
+    outline: none;
+    padding: 10px;
+    transition: .3s all;
+    width: 100%;
+}
+textarea {
+    @extend input
+    
+}
+  
+input:focus {
+    border-bottom: 5px solid $form-shadow;
+    transition: .3s all;
+}
+  
+// button{
+//     display: block;
+//     margin: 0 auto;
+//     line-height: $font-size * 2;
+//     padding: 0 20px;
+//     background: $form-shadow;
+//     letter-spacing: 2px;
+//     transition: .2s all ease-in-out;
+//     outline: none;
+//     border: 1px solid rgba(0,0,0,1);
+//     box-shadow: 3px 3px 1px $form-primary-highlight, 3px 3px 1px 1px rgba(0,0,0,1);
+// }
+  
+// button:hover {
+//     background: rgba(0,0,0,1);
+//     color: white;
+//     border: 1px solid rgba(0,0,0,1);
+// }
+
+input::selection {
+    background: $form-secondary-highlight
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+
+    border-bottom: 5px solid $form-primary-highlight;
+    -webkit-text-fill-color: $font-color;
+    -webkit-box-shadow: 0 0 0px 1000px $form-bg inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type="checkbox"] {
+    border: 1px solid red;
+    width: 30px;
+    margin: 3px;
+    min-width: initial;
+    text-align: center;
+    display: inline-block;
+}

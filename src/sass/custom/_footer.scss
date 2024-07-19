@@ -1,0 +1,18 @@
+/* Footer */
+
+footer {
+    background-color: black;
+    color: $blanco_necio;
+}
+
+.footer__list--contacto {
+    list-style-type: none;
+    padding-left: 0;
+}
+.footer__legals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    font-size: .8em;
+}
