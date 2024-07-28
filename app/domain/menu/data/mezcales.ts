@@ -1,5 +1,4 @@
-import { idText } from "typescript"
-import { Agaves } from "../enum/agaves"
+import { Agaves } from "../../mezcal/enum/agaves"
 import { Brands } from "../../mezcal/enum/brands"
 
 export default [
