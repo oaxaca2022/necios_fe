@@ -1,0 +1,12 @@
+export enum Agaves {
+  ARROQUEÑO = "ARROQUEÑO",
+  CUIXE = "CUIXE",  
+  PECHUGA = "PECHUGA",
+  GUSANO = "GUSANO",
+  ESPADIN = "ESPADIN",
+  JABALI = "JABALI",
+  TEPEZTATE = "TEPEZTATE",
+  MEXICANO = "MEXICANO",
+  TOBALA = "TOBALA",
+  OTHER = "OTHER",
+}
