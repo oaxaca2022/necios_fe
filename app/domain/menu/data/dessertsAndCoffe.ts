@@ -46,6 +46,7 @@ export default [
     title: "Café Latte",
     description: "",
     price: 70,
+  },
   {
     id: '000',
     title: "Carga Extra de Café",
