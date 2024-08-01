@@ -1,0 +1,29 @@
+---
+interface Props {
+	title?: string;
+	items: any
+  description?: string;
+}
+
+const { title = "", items } = Astro.props;
+---
+
+<div>
+  <h3 class="text-2xl py-4 uppercase font-bold">{title}</h3>
+  <ul class="flex flex-col gap-1 mb-8">
+    {
+      items.map((item, index) => (
+        <li class="flex flex-row justify-between gap-2 border-b pt-4 items-center" id={`${index}`}>
+          <div class="flex flex-col gap-2 justify-between max-w-72">
+            <span class="">{item.title}</span>
+            <span>{ item.description }</span>
+
+          </div>
+          <div class="w-16 flex justify-end">
+            <span>$ {item.price}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>
