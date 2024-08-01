@@ -1,23 +1,293 @@
 ---
+import { MenuSections } from '../../app/domain/menu/enum/MenuSections';
+import { Drinks } from '../../app/domain/menu/enum/DrinksTitles';
 import Layout from '../layouts/Layout.astro';
+import { Agaves } from '../../app/domain/mezcal/enum/agaves';
+import Block from '../components/Menu/Block.astro';
+import mezcales from '../../app/domain/menu/data/mezcales';
+import beersList from '../../app/domain/menu/data/beers';
+import ginsList from '../../app/domain/menu/data/gin';
+import tequilaList from '../../app/domain/menu/data/tequila';
+import ronsList from '../../app/domain/menu/data/ron';
+import vodkasList from '../../app/domain/menu/data/vodka';
+import food from '../../app/domain/menu/data/food';
+import { FoodCategoriesEnum } from '../../app/domain/food/enum/categories';
+import mixology from '../../app/domain/menu/data/mixology';
+import cocktailBar from '../../app/domain/menu/data/cocktailBar';
+import cocktailBarNoAlcohol from '../../app/domain/menu/data/cocktailBarNoAlcohol';
+import liquors from '../../app/domain/menu/data/liquors';
+import dessertsAndCoffe from '../../app/domain/menu/data/dessertsAndCoffe';
+
+
+const arroqueno = mezcales.filter(mezcal => mezcal.type === Agaves.ARROQUEÑO);
+const cuishe = mezcales.filter(mezcal => mezcal.type === Agaves.CUIXE);
+const espadin = mezcales.filter(mezcal => mezcal.type === Agaves.ESPADIN);
+const gusano = mezcales.filter(mezcal => mezcal.type === Agaves.GUSANO);
+const jabali = mezcales.filter(mezcal => mezcal.type === Agaves.JABALI);
+const mexicano = mezcales.filter(mezcal => mezcal.type === Agaves.MEXICANO);
+const other = mezcales.filter(mezcal => mezcal.type === Agaves.OTHER);
+const pechuga = mezcales.filter(mezcal => mezcal.type === Agaves.PECHUGA);
+const tepeztate = mezcales.filter(mezcal => mezcal.type === Agaves.TEPEZTATE);
+const tobala = mezcales.filter(mezcal => mezcal.type === Agaves.TOBALA);
+
+// Bebidas
+
+const beers = beersList
+const gin = ginsList
+const tequila = tequilaList
+const ron = ronsList
+const vodka = vodkasList
+const whisky = vodkasList
+
+
+const menuSectionLabels = {
+  [MenuSections.COCKTAILS]: "Coctelería" ,
+  [MenuSections.COCKTAILS_NO_ALCOHOL]: "Coctelería sin alcohol",
+  [MenuSections.DESSERTS_AND_COFFEE]: "Postres y café",
+  [MenuSections.DRINKS]: "Bebidas" ,
+  [MenuSections.FOOD]: "Comida" ,
+  [MenuSections.LIQUORS]: "Licores" ,
+  [MenuSections.MEZCALES]: "Mezcales" ,
+  [MenuSections.MIXOLOGY]: "Mixología" ,
+
+}
+
+const mezcalTitles = {
+  [Agaves.ARROQUEÑO]: "Arroqueño",
+  [Agaves.CUIXE]: "Cuishe",
+  [Agaves.ESPADIN]: "Espadín",
+  [Agaves.GUSANO]: "Gusano",
+  [Agaves.JABALI]: "Jabalí",
+  [Agaves.MEXICANO]: "Mexicano",
+  [Agaves.OTHER]: "Otros",
+  [Agaves.PECHUGA]: "Pechuga",
+  [Agaves.TEPEZTATE]: "Tepeztate",
+  [Agaves.TOBALA]: "Tobalá",
+}
+
+const drinksTitles = {
+  [Drinks.BEERS]: "Cerveza",
+  [Drinks.GINS]: "Ginebra",
+  [Drinks.TEQUILAS]: "Tequila",
+  [Drinks.RUMS]: "Ron",
+  [Drinks.VODKAS]: "Vodkas",
+  [Drinks.WHISKIES]: "Whiskys",
+}
+
+const footItems = [
+  {
+    title: "De la casa",
+    items: food.filter(item => item.category === FoodCategoriesEnum.DE_LA_CASA)
+  },
+  {
+    title: "Tacos",
+    items: food.filter(item => item.category === FoodCategoriesEnum.TACOS)
+  },
+  {
+    title: "Tlayudas",
+    items: food.filter(item => item.category === FoodCategoriesEnum.TLAYUDAS)
+  },
+  {
+    title: "Tortas",
+    items: food.filter(item => item.category === FoodCategoriesEnum.TORTAS)
+  }
+]
+
+const mezcalesItems = [
+  {
+    title: "Arroqueño",
+    items: arroqueno
+  },
+  {
+    title: "Pechuga",
+    items: pechuga
+  },
+  {
+    title: "Espadín",
+    items: espadin
+  },
+  {
+    title: "Mexicano",
+    items: mexicano
+  },
+  {
+    title: "Tobalá",
+    items: tobala
+  },
+  {
+    title: "Cuishe",
+    items: cuishe
+  },
+  {
+    title: "Gusano",
+    items: gusano
+  },
+  {
+    title: "Jabalí",
+    items: jabali
+  },
+  {
+    title: "Tepeztate",
+    items: tepeztate
+  },
+  {
+    title: "Otros",
+    items: other
+  },
+]
+
+const drinksList = [
+  {
+    title: "Cerveza",
+    items: beers
+  },
+  {
+    title: "Gin",
+    items: gin
+  },
+  {
+    title: "Tequila",
+    items: tequila
+  },
+  {
+    title: "Ron",
+    items: ron
+  },
+  {
+    title: "Vodka",
+    items: vodka
+  },
+  {
+    title: "Whisky",
+    items: whisky
+  },
+]
 
 ---
 <Layout title="Menú - Necios bar">
-  
-<main id="menu">
-  <section class="section__container">
-      <div class="section__background">
-          <div class="section__content pt-20">
-              <div class="section__title">
-                  <h1>Menú</h1>
-              </div>
-              <div class="menu__grid section__grid" id="menuGrid">                
-                <a href="/carta/MENU_NECIOS_MEZCALERIA.pdf" id="pdfCartaAlimentos" class="btn" target="_blank">Alimentos y bebidas</a>
-              </div>
-          </div>
-      </div>
-  </section>
-</main>
+  <main id="menu">
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content pt-20">
+                <div class="section__title">
+                    <h1>Menú</h1>
+                </div>
+                <div class="menu__grid section__grid" id="menuGrid">                
+                  <a href="/carta/MENU_NECIOS_MEZCALERIA.pdf" id="pdfCartaAlimentos" class="btn" target="_blank">Alimentos y bebidas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content pt-20" id="alimentos">
+                <div class="section__title">
+                    <h2 class="text-4xl">Alimentos</h2>
+                </div>
+                <section class="section__grid">
+                  <h3 class="text-4xl">{ menuSectionLabels[MenuSections.FOOD] }</h3>
+                  {
+                    footItems.map((item, index) => (
+                      <div>
+                        <Block
+                          title={item.title}
+                          items={item.items}
+                        />
+                      </div>
+                    ))
+                  }
+                </section>
+            </div>
+        </div>
+    </section>
+    <section class="section__container">
+        <div class="section__background">
+            <div class="section__content pt-20" id="bebidas">
+                <div class="section__title">
+                    <h2 class="text-3xl">Bebidas</h2>
+                </div>
+            </div>
+            <!-- Mezcales -->
+            <section class="section__grid">
+              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.MEZCALES] }</h3>
+              {
+                mezcalesItems.map((item, index) => (
+                  <div>
+                    <Block
+                      title={item.title}
+                      items={item.items}
+                    />
+                  </div>
+                ))
+              }
+            </section>
+            <!-- Bebidas -->
+            <section class="section__grid">
+              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.DRINKS] }</h3>
+              {
+                drinksList.map((item, index) => (
+                  <div>
+                    <Block
+                      title={item.title}
+                      items={item.items}
+                    />
+                  </div>
+                ))
+              }
+            </section>
+            <!-- Mixología Necios -->
+            <section class="section__grid">
+              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.MIXOLOGY] }</h3>
+              <Block 
+                items={mixology}
+              />
+            </section>
+            <!-- Coctelería -->
+            <section class="section__grid">
+              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.COCKTAILS] }</h3>
+              <Block 
+                items={cocktailBar}
+              />
+            </section>
+            <!-- Sin alcohol -->
+            <section class="section__grid">
+              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.COCKTAILS_NO_ALCOHOL] }</h3>
+              <Block 
+                items={cocktailBarNoAlcohol}
+              />
+            </section>
+            <!-- Licores -->
+            <section class="section__grid">
+              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.LIQUORS] }</h3>
+              <Block 
+                items={liquors}
+              />
+            </section>
+            <!-- Postres y caf´r -->
+            <section class="section__grid">
+              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.DESSERTS_AND_COFFEE] }</h3>
+              <Block 
+                items={dessertsAndCoffe}
+              />
+            
+            </section>
+        </div>
+    </section>
+  </main>
+  <!-- <div class="fixed border border-red-600 bottom-0 left-0 right-0 w-full flex flex-row bg-black ">
+    <div class="p-4 flex gap-2  justify-center items-center w-1/2">
+      <a href="#alimentos" class="text-white flex flex-col gap-2 justify-center items-center">
+        <img src="/carta/food.svg" class="w-10" alt="">
+        <span>Alimentos</span>
+      </a>
+    </div>
+    <div class="p-4 flex gap-2  justify-center items-center w-1/2">
+      <a href="#bebidas" class="text-white flex flex-col gap-2 justify-center items-center">
+        <img src="/carta/drinks.svg" class="w-10" alt="">
+        <span>Bebidas</span>
+      </a>
+    </div>
+  </div> -->
 </Layout>
 <style lang="scss">
   @import '../sass/neciosbar.scss';
