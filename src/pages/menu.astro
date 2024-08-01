@@ -186,16 +186,18 @@ const drinksList = [
                 </div>
                 <section class="section__grid">
                   <h3 class="text-4xl">{ menuSectionLabels[MenuSections.FOOD] }</h3>
-                  {
-                    footItems.map((item, index) => (
-                      <div>
-                        <Block
-                          title={item.title}
-                          items={item.items}
-                        />
-                      </div>
-                    ))
-                  }
+                  <div class="md:grid grid-cols-2 gap-16 ">
+                    {
+                      footItems.map((item, index) => (
+                        <div class="">
+                          <Block
+                            title={item.title}
+                            items={item.items}
+                          />
+                        </div>
+                      ))
+                    }
+                  </div>
                 </section>
             </div>
         </div>
@@ -206,71 +208,73 @@ const drinksList = [
                 <div class="section__title">
                     <h2 class="text-3xl">Bebidas</h2>
                 </div>
+                <!-- Mezcales -->
+                <section class="section__grid">
+                  <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.MEZCALES] }</h3>
+                  <div class="md:grid grid-cols-2 gap-16 ">
+                  {
+                    mezcalesItems.map((item, index) => (
+                        <Block
+                          title={item.title}
+                          items={item.items}
+                        />
+                      ))
+                    }
+                  </div>
+                </section>
+                <!-- Bebidas -->
+                <section class="section__grid">
+                  <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.DRINKS] }</h3>
+                  <div class="md:grid grid-cols-2 gap-16 ">
+                    {
+                    drinksList.map((item, index) => (
+                        <Block
+                          title={item.title}
+                          items={item.items}
+                        />
+                      ))
+                    }
+                  </div>
+                </section>
+                <!-- Mixología Necios -->
+                <section class="section__grid">
+                  <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.MIXOLOGY] }</h3>
+                  <div class="md:grid grid-cols-2 gap-16 ">
+                    <Block 
+                      items={mixology}
+                    />
+                  </div>
+                </section>
+                <!-- Coctelería -->
+                <section class="section__grid">
+                  <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.COCKTAILS] }</h3>
+                  <Block 
+                    items={cocktailBar}
+                  />
+                </section>
+                <!-- Sin alcohol -->
+                <section class="section__grid">
+                  <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.COCKTAILS_NO_ALCOHOL] }</h3>
+                  <Block 
+                    items={cocktailBarNoAlcohol}
+                  />
+                </section>
+                <!-- Licores -->
+                <section class="section__grid">
+                  <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.LIQUORS] }</h3>
+                  <Block 
+                    items={liquors}
+                  />
+                </section>
+                <!-- Postres y caf´r -->
+                <section class="section__grid">
+                  <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.DESSERTS_AND_COFFEE] }</h3>
+                  <Block 
+                    items={dessertsAndCoffe}
+                  />
+                
+                </section>
             </div>
-            <!-- Mezcales -->
-            <section class="section__grid">
-              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.MEZCALES] }</h3>
-              {
-                mezcalesItems.map((item, index) => (
-                  <div>
-                    <Block
-                      title={item.title}
-                      items={item.items}
-                    />
-                  </div>
-                ))
-              }
-            </section>
-            <!-- Bebidas -->
-            <section class="section__grid">
-              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.DRINKS] }</h3>
-              {
-                drinksList.map((item, index) => (
-                  <div>
-                    <Block
-                      title={item.title}
-                      items={item.items}
-                    />
-                  </div>
-                ))
-              }
-            </section>
-            <!-- Mixología Necios -->
-            <section class="section__grid">
-              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.MIXOLOGY] }</h3>
-              <Block 
-                items={mixology}
-              />
-            </section>
-            <!-- Coctelería -->
-            <section class="section__grid">
-              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.COCKTAILS] }</h3>
-              <Block 
-                items={cocktailBar}
-              />
-            </section>
-            <!-- Sin alcohol -->
-            <section class="section__grid">
-              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.COCKTAILS_NO_ALCOHOL] }</h3>
-              <Block 
-                items={cocktailBarNoAlcohol}
-              />
-            </section>
-            <!-- Licores -->
-            <section class="section__grid">
-              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.LIQUORS] }</h3>
-              <Block 
-                items={liquors}
-              />
-            </section>
-            <!-- Postres y caf´r -->
-            <section class="section__grid">
-              <h3 class="text-4xl text-center">{ menuSectionLabels[MenuSections.DESSERTS_AND_COFFEE] }</h3>
-              <Block 
-                items={dessertsAndCoffe}
-              />
-            
-            </section>
         </div>
     </section>
   </main>
