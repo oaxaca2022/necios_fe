@@ -1,4 +1,5 @@
 ---
+import FooterActions from '../components/FooterActions.astro';
 import Layout from '../layouts/Layout.astro';
 
 const heroImages = [
@@ -130,24 +131,7 @@ const foodImages = [
                 </div>
             </div>
         </div>
-        <div class="section__container section__cta">
-            <div class="section__background background__cta">
-                <div class="grid__cta">
-                    <div class="cta__item">
-                        <a href="tel:5589995869" class="btn__cta">
-                            <i class="fi-cta flaticon-llamada-telefonica"></i>
-                            <span>Reserva</span>
-                        </a>
-                    </div>
-                    <div class="cta__item">
-                        <a href="/menu" class="btn__cta">
-                            <i class="fi-cta flaticon-comida-1"></i>
-                            Carta
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <FooterActions />
     </header>
 
     <!-- ¿quiénes somos? -->
@@ -334,9 +318,9 @@ const foodImages = [
                     <div class="promos__item">
                         <ul>
                             <li>
-                                <h3 class="title__promos">Martes a viernes</h3>
-                                <p>Tlayuda + mezcal + guacamole</p>
-                                <p class="promos__precio">$150.00</p>
+                                <h3 class="title__promos">MARTES Y MIÉRCOLES </h3>
+                                <p>Cerveza y Mezcal </p>
+                                <p class="promos__precio">$150.00*</p>
                             </li>
                             <!-- <li>
                                 <h3 class="title__promos">Comida 1 y bebida 2*</h3>
@@ -352,7 +336,9 @@ const foodImages = [
                         <a href="/promociones" class="btn">
                             Ver todas las promociones
                         </a>
-                        *Solo marcas participantes. Consulta disponibilidad y vigencia. Aplican términos y condiciones.
+                        <p>
+                          *Solo marcas participantes. Consulta disponibilidad y vigencia. Aplican términos y condiciones en el establecimiento.
+                        </p>
                     </div>
                 </div>
             </div>

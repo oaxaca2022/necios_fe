@@ -1,43 +1,45 @@
 ---
+import FooterActions from "../components/FooterActions.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="Necios bar - Promociones">
   <section class="section__container">
-    <div class="section__background">
+    <div class="section__background pt-16">
         <div class="section__content">
             <div class="grid__promos section__grid">
                 <div class="promos__item">
                     <div class="section__title">
-                        <h2 class="section__title--h2">Martes a Sábado</h2>
-                        
-                        
+                        <h2 class="text-3xl">Promociones</h2>
                     </div>
                 </div>
                 <div class="promos__item">
-                    <ul>
+                  <h3 class="text-2xl text-center my-4">Martes y miércoles</h3>
+                    <ul class="flex flex-col gap-8">
                         <li>
-                            <h3 class="title__promos">Tlayuda + mezcal + guacamole*</h3>
-                            <!-- <p>Tlayuda + mezcal + guacamole*</p> -->
-                            <p class="promos__precio">$150.00</p>
+                            <h3 class="title__promos">Cerveza y Mezcal </h3>
+                            <p class="promos__precio">$150*</p>
                         </li>
                         <li>
-                            <h3 class="title__promos">Tacos + mezcal*</h3>
-                            <!-- <p>Tacos + mezcal*</p> -->
-                            <p class="promos__precio">$80.00</p>
+                            <h3 class="title__promos">Tlayuda de Cecina, Mezcal y Cerveza </h3>
+                            <p class="promos__precio">$250*</p>
                         </li>
                         <li>
-                            <h3 class="title__promos">Mezcal + cerveza*</h3>
-                            <!-- <p>Mezcal + cerveza</p> -->
-                            <p class="promos__precio">$100.00</p>
+                            <h3 class="title__promos">Latte y Rebanada de pastel:</h3>
+                            <p class="promos__precio">$120*</p>
                         </li>
                     </ul>
                     
-                    *Solo marcas participantes. Consulta disponibilidad y vigencia. Aplican términos y condiciones.
+                    <p class="my-4">
+                      *Solo marcas participantes. Consulta disponibilidad y vigencia. Aplican términos y condiciones en el establecimiento.
+
+                    </p>
                 </div>
             </div>
         </div>
     </div>
   </section>
+  <FooterActions />
+
 </Layout>
 <style lang="scss">
   @import '../sass/neciosbar.scss';
